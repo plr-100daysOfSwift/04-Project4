@@ -15,7 +15,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 	override func loadView() {
 		webView = WKWebView()
 		webView.navigationDelegate = self
-		webView.allowsBackForwardNavigationGestures = true
+		view = webView
 	}
 
 	override func viewDidLoad() {
