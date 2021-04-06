@@ -44,6 +44,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		webView.load(URLRequest(url: url))
 	}
 
-
+	// MARK: - WKNavigationDelegate
+	func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+		title = webView.title
+	}
 }
 
