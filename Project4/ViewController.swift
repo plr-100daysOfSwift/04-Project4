@@ -23,7 +23,17 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		let url = URL(string: "https://www.hackingwithswift.com")!
 		webView.load(URLRequest(url: url))
 		webView.allowsBackForwardNavigationGestures = true
+
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open",
+																												style: .plain,
+																												target: self,
+																												action: #selector(openTapped))
 	}
+
+	@objc func openTapped() {
+		// more code here
+	}
+
 
 }
 
