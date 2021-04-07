@@ -11,6 +11,7 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
 
 	var webView: WKWebView!
+	var progressView: UIProgressView!
 
 	override func loadView() {
 		webView = WKWebView()
@@ -33,7 +34,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
 		toolbarItems = [spacer, refresh]
 		navigationController?.isToolbarHidden = false
-		
+
 	}
 
 	@objc func openTapped() {
