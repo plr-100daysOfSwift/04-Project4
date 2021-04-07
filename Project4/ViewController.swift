@@ -44,8 +44,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
 	@objc func openTapped() {
 		let ac = UIAlertController(title: "Open ...", message: nil, preferredStyle: .actionSheet)
-		ac.addAction(UIAlertAction(title: "apple.com", style: .default, handler: openPage))
-		ac.addAction(UIAlertAction(title: "hackingwithswift.com", style: .default, handler: openPage))
+		for website in websites {
+			ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
+		}
 		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		ac.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
 		present(ac, animated: true)
