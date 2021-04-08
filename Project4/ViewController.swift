@@ -23,10 +23,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open",
-																												style: .plain,
-																												target: self,
-																												action: #selector(openTapped))
 		if let website = website {
 			let url = URL(string: "https://" + website)!
 			webView.load(URLRequest(url: url))
@@ -43,21 +39,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		let forward = UIBarButtonItem(image: UIImage(systemName: "chevron.right"), style: .plain, target: webView, action: #selector(webView.goForward))
 		toolbarItems = [progressButton, spacer, back, spacer, forward, spacer, refresh]
 		navigationController?.isToolbarHidden = false
-	}
-
-	@objc func openTapped() {
-		let ac = UIAlertController(title: "Open ...", message: nil, preferredStyle: .actionSheet)
-		for website in websites {
-			ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
-		}
-		ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-		ac.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
-		present(ac, animated: true)
-	}
-
-	@objc func openPage(action: UIAlertAction) {
-		let url = URL(string: "https://www." + action.title!)!
-		webView.load(URLRequest(url: url))
 	}
 
 	// MARK: - Key-Value Observing
