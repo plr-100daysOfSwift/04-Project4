@@ -28,4 +28,12 @@ class TableViewController: UITableViewController {
 		return cell
 	}
 
+	// MARK: - Table view delegate
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyboard.instantiateViewController(identifier: "ViewController") as ViewController
+		vc.website = websites[indexPath.row]
+		navigationController?.pushViewController(vc, animated: true)
+	}
 }
