@@ -64,9 +64,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		}
 
 		decisionHandler(.cancel)
-		let ac = UIAlertController(title: "This link is blocked.", message: url?.absoluteString, preferredStyle: .alert)
-		ac.addAction(UIAlertAction(title: "OK", style: .default))
-		present(ac, animated: true)
+		if !webView.isLoading {
+			let ac = UIAlertController(title: "This link is blocked.", message: url?.absoluteString, preferredStyle: .alert)
+			ac.addAction(UIAlertAction(title: "OK", style: .default))
+			present(ac, animated: true)
+		}
 	}
 }
 
