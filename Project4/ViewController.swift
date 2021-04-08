@@ -37,7 +37,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		let progressButton = UIBarButtonItem(customView: progressView)
 		let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 		let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
-		toolbarItems = [progressButton, spacer, refresh]
+		let back = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: webView, action: #selector(webView.goBack))
+		let forward = UIBarButtonItem(image: UIImage(systemName: "chevron.right"), style: .plain, target: webView, action: #selector(webView.goForward))
+		toolbarItems = [progressButton, spacer, back, spacer, forward, spacer, refresh]
 		navigationController?.isToolbarHidden = false
 
 	}
