@@ -41,7 +41,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
 		let forward = UIBarButtonItem(image: UIImage(systemName: "chevron.right"), style: .plain, target: webView, action: #selector(webView.goForward))
 		toolbarItems = [progressButton, spacer, back, spacer, forward, spacer, refresh]
 		navigationController?.isToolbarHidden = false
-
 	}
 
 	@objc func openTapped() {

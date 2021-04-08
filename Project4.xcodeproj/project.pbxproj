@@ -14,6 +14,7 @@
 		DA70F976261D123400FDE4A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA70F975261D123400FDE4A2 /* Assets.xcassets */; };
 		DA70F979261D123400FDE4A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA70F977261D123400FDE4A2 /* LaunchScreen.storyboard */; };
 		DA70F98A261D12AF00FDE4A2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA70F989261D12AF00FDE4A2 /* README.md */; };
+		DAC5A741261FBFCA00D6656C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC5A740261FBFCA00D6656C /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DA70F978261D123400FDE4A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA70F97A261D123400FDE4A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA70F989261D12AF00FDE4A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DAC5A740261FBFCA00D6656C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				DA70F96C261D123300FDE4A2 /* AppDelegate.swift */,
 				DA70F96E261D123300FDE4A2 /* SceneDelegate.swift */,
+				DAC5A740261FBFCA00D6656C /* TableViewController.swift */,
 				DA70F970261D123300FDE4A2 /* ViewController.swift */,
 				DA70F972261D123300FDE4A2 /* Main.storyboard */,
 				DA70F975261D123400FDE4A2 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				DA70F971261D123300FDE4A2 /* ViewController.swift in Sources */,
 				DA70F96D261D123300FDE4A2 /* AppDelegate.swift in Sources */,
 				DA70F96F261D123300FDE4A2 /* SceneDelegate.swift in Sources */,
+				DAC5A741261FBFCA00D6656C /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
