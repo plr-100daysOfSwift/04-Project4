@@ -22,15 +22,17 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let url = URL(string: "https://" + websites[0])!
-		webView.load(URLRequest(url: url))
-		webView.allowsBackForwardNavigationGestures = true
-		webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
 
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open",
 																												style: .plain,
 																												target: self,
 																												action: #selector(openTapped))
+		if let website = website {
+			let url = URL(string: "https://" + website)!
+			webView.load(URLRequest(url: url))
+			webView.allowsBackForwardNavigationGestures = true
+			webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+		}
 
 		progressView = UIProgressView(progressViewStyle: .default)
 		progressView.sizeToFit()
