@@ -81,6 +81,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
 			}
 		}
 
-		decisionHandler(.cancel)	}
+		decisionHandler(.cancel)
+		let ac = UIAlertController(title: "This link is blocked.", message: url?.absoluteString, preferredStyle: .alert)
+		ac.addAction(UIAlertAction(title: "OK", style: .default))
+		present(ac, animated: true)
+	}
 }
 
